@@ -1,0 +1,66 @@
+﻿@model IEnumerable<BoardWebApp.Models.Note>
+@{
+    ViewData["Title"] = "게시판";
+}
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="table-responsive">
+                <table class="table table-striped"></table>
+            </div>
+                
+        </div>
+    </div>
+<div class="container">
+    <div class="row pt-4">
+        <div class="col-10">
+            <h1 class="text-primary">게시판 글쓰기</h1>
+        </div>
+        <div class="col text-end">
+                    <a asp-controller="Note" asp-action="Create" class="btn btn-primary">글생성</a>                
+            </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.UserId)</th>
+                            <th>@Html.DisplayNameFor(model => model.Name)</th>
+                            <th>@Html.DisplayNameFor(model => model.Title)</th>
+                            <th>@Html.DisplayNameFor(model => model.ReadCount)</th>
+                            <th>@Html.DisplayNameFor(model => model.PostDate)</th>
+                            <th>@Html.DisplayNameFor(model => model.Contents)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.UserId)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ReadCount)</td>
+                                <td>@Html.DisplayFor(modelItem => item.PostDate)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Contents)</td>
+                                <td>
+                                    <!--수정, 상세, 삭제 버튼-->
+                                    <a asp-controller="Note" asp-action="Edit" asp-route-itemid="@item.Id"class="btn btn-success">수정</a>
+
+                                    <a asp-controller="Note" asp-action="Detail" asp-route-itemid="@item.Id">상세</a>
+                                    <a asp-controller="Note" asp-action="Delete" asp-route-itemid="@item.Id"class="btn btn-danger" >삭제</a>
+                                </td>
+
+
+                            </tr>
+                        }
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
