@@ -46,6 +46,8 @@ ASP.NET Core 학습 리포지토리
  - 게시판 추가 기능
  - 페이징기능
  - 게시판 완성
+ - 회원가입 완료
+ - !https://github.com/youngsu-Jang/studyASPNET/blob/main/image/asp.Net_screen01.png
  
 ## 8일차
  - 회원가입

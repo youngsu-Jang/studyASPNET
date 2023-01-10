@@ -4,6 +4,7 @@ using BoardWebApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BoardWebApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230110052449_AddIdentity")]
+    partial class AddIdentity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,40 +24,40 @@ namespace BoardWebApp.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            //modelBuilder.Entity("BoardWebApp.Models.Note", b =>
-            //    {
-            //        b.Property<int>("Id")
-            //            .ValueGeneratedOnAdd()
-            //            .HasColumnType("int");
+            modelBuilder.Entity("BoardWebApp.Models.Note", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-            //        SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-            //        b.Property<string>("Contents")
-            //            .IsRequired()
-            //            .HasColumnType("nvarchar(max)");
+                    b.Property<string>("Contents")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-            //        b.Property<string>("Name")
-            //            .IsRequired()
-            //            .HasColumnType("nvarchar(max)");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-            //        b.Property<DateTime>("PostDate")
-            //            .HasColumnType("datetime2");
+                    b.Property<DateTime>("PostDate")
+                        .HasColumnType("datetime2");
 
-            //        b.Property<int>("ReadCount")
-            //            .HasColumnType("int");
+                    b.Property<int>("ReadCount")
+                        .HasColumnType("int");
 
-            //        b.Property<string>("Title")
-            //            .IsRequired()
-            //            .HasColumnType("nvarchar(max)");
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-            //        b.Property<string>("UserId")
-            //            .IsRequired()
-            //            .HasColumnType("nvarchar(max)");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-            //        b.HasKey("Id");
+                    b.HasKey("Id");
 
-            //        b.ToTable("Notes");
-            //    });
+                    b.ToTable("Notes");
+                });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {

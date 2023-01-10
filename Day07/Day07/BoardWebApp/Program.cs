@@ -1,4 +1,5 @@
 using BoardWebApp.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace BoardWebApp
@@ -18,6 +19,11 @@ namespace BoardWebApp
                         )
                 );
 
+            // ASP.NET Identity용 서비스 추가
+            builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -33,6 +39,7 @@ namespace BoardWebApp
 
             app.UseRouting();
 
+            app.UseAuthentication(); // 이제부터 계정을 사용할 거다.
             app.UseAuthorization();
 
             app.MapControllerRoute(
