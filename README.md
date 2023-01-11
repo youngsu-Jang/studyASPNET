@@ -47,14 +47,21 @@ ASP.NET Core 학습 리포지토리
  - 페이징기능
  - 게시판 완성
 <<<<<<< HEAD
- - 회원가입 완료
- - !https://github.com/youngsu-Jang/studyASPNET/blob/main/image/asp.Net_screen01.png
-=======
- - 
- ![게시판 리스트](https://github.com/youngsu-Jang/studyASPNET/blob/main/image/asp.Net_screen01.png)
+ - ![회원가입 완료]
+ - (https://github.com/youngsu-Jang/studyASPNET/blob/main/image/asp.Net_screen01.png)
+ 
+ - ![회원가입화면]
+ (https://github.com/youngsu-Jang/studyASPNET/blob/main/image/KakaoTalk_20230111_123721759.png)
+ 
+ 
+ - ![게시판 리스트](https://github.com/youngsu-Jang/studyASPNET/blob/main/image/asp.Net_screen01.png)
 >>>>>>> 923bcfd938599ac380d2675a149b9ce47c6c44c4
  
 ## 8일차
+- ASP, NET Core
  - 회원가입
  - 로그인
  - 세션관리
+ 
+
+ 
