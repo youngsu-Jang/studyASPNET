@@ -1,21 +1,25 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace BoardWebApp.Models
 {
-	public class RegisterModel
+    public class RegisterModel
 	{
-		[Required(AllowEmptyStrings = false, ErrorMessage = "아이디를 입력하세요.")]
-		[Display(Name = "아이디")]
+		[Key]
 
-		public string Id { get; set; }
+		public int Id { get; set; }
+		
 
-		[Required(AllowEmptyStrings = false, ErrorMessage = "이름을 입력하세요.")]
-        [Display(Name = "이름" )]
-		public string UserName { get;}
+		[Required(AllowEmptyStrings = false, ErrorMessage = "유저아이디를 입력하세요.")]
+        [Display(Name = "유저아이디" )]
+		public string UserName { get; set; }
 
 		[Required(AllowEmptyStrings = false, ErrorMessage = "이메일을 입력하세요.")]
+        [EmailAddress(ErrorMessage = "이메일형식에 맞지 않습니다.")]
         [Display(Name = "이메일")]
-		[EmailAddress]
+
+       
 		public string Email { get; set; }
 
 		[Required(AllowEmptyStrings = false, ErrorMessage = "패스워드를 입력하세요.")]
@@ -29,7 +33,9 @@ namespace BoardWebApp.Models
 		[Compare("Password", ErrorMessage = "패스워드가 일치하지 않습니다.")]
 		public string ConfirmPassword { get; set; }
 
-		[Display(Name = "핸드폰 번호")]
-		public string PhoneNumber { get; set; }
-	}
+		
+		
+        [Display(Name = "핸드폰 번호")]
+		public string? PhoneNumber { get; set; }
+    }
 }

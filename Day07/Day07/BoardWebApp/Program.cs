@@ -24,6 +24,21 @@ namespace BoardWebApp
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            // 패스워드 정책 변경 설정
+            builder.Services.Configure<IdentityOptions>(
+                opt =>
+                
+                {
+                    opt.Password.RequiredLength = 4; // 글자길이 제한
+                    opt.Password.RequireNonAlphanumeric = false; // 특수문자
+                    opt.Password.RequireDigit = false; // 영문자
+                    opt.Password.RequireLowercase = false; // 소문자
+                    opt.Password.RequireUppercase = false; // 대문자
+
+
+                }    
+            );
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

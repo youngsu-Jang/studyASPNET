@@ -17,3 +17,7 @@ body {
   margin-bottom: 60px;
 }
 
+.custom-login {
+    text-align: center!important;
+    margin: auto!important;
+}

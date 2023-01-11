@@ -14,17 +14,6 @@
             <h4 class="mb-4">회원정보</h4>
             <form asp-action="Register">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Id" class="control-label"></label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">&otimes;</span>
-                    </div>
-                        <input asp-for="Id" class="form-control" placeholder="아이디 입력" />
-                        
-                </div>
-                    <span asp-validation-for="Id" class="text-danger"></span>
-            </div>
             <div class="form-mb-3">
                 <label asp-for="UserName" class="control-label"></label>
                 <input asp-for="UserName" class="form-control" placeholder="이름 입력"/>
