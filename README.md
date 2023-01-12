@@ -42,7 +42,7 @@ ASP.NET Core 학습 리포지토리
   
 
 ## 7일차
-- ASP, NET Core
+- ASP. NET Core
  - 게시판 추가 기능
  - 페이징기능
  - 게시판 완성
@@ -57,11 +57,29 @@ ASP.NET Core 학습 리포지토리
  - ![게시판 리스트](https://github.com/youngsu-Jang/studyASPNET/blob/main/image/asp.Net_screen01.png)
 >>>>>>> 923bcfd938599ac380d2675a149b9ce47c6c44c4
  
+ - ![템플릿 적용 화면](https://github.com/youngsu-Jang/studyASPNET/blob/main/image/asp.Net_screen04.png)
+ 
 ## 8일차
-- ASP, NET Core
+- ASP. NET Core
  - 회원가입
  - 로그인
  - 세션관리
  
-
+## 9일차
+- ASP.NET Core
+ - Bootstrap 템플릿 적용 1차완료
+ - 권한관리
+ - 다른 템플릿 적용
+ - 기타 기능
+ 
+  2. 개발화면
+ 
+ 
+ 
+ ## 10일차
+ 1. ASP.NET Core
+  - 마무리
+  
+  2. 개발화면
+ 
  
