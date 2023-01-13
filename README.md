@@ -77,10 +77,12 @@ ASP.NET Core 학습 리포지토리
  - 권한관리
  - 다른 템플릿 적용
  - 기타 기능
- - 메인 페이지 연동
+ - 메인 화면 DB 연동
  
   2. 개발화면
- 
+ ![메인화면]
+ (https://github.com/youngsu-Jang/studyASPNET/blob/main/image/KakaoTalk_20230113_141741521.png)
+ DB연동 메인화면
  
  
  ## 10일차
@@ -91,5 +93,9 @@ ASP.NET Core 학습 리포지토리
   - 전체 마무리
   
   2. 개발화면
+  
+  ![권한관리화면]
+  (https://github.com/youngsu-Jang/studyASPNET/blob/main/image/KakaoTalk_20230113_141741521_01.png)
+ 
  
  
